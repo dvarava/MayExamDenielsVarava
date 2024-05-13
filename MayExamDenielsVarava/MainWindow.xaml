@@ -18,9 +18,9 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Orientation="Horizontal">
-            <Label Content="Booking Details" FontSize="20" Grid.Column="0" Grid.Row="0" Margin="10,10,0,0"/>
-            <DatePicker Name="dtpDetailsBookingDate" Grid.Column="0" Grid.Row="0" Height="20"  Margin="10,0,0,0" SelectedDateChanged="dtpDetailsBookingDate_SelectedDateChanged"/>
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0" >
+            <Label Content="Booking Details" FontSize="20" Margin="10,10,0,0"/>
+            <DatePicker Name="dtpDetailsBookingDate" Height="20"  Margin="10,0,0,0" SelectedDateChanged="dtpDetailsBookingDate_SelectedDateChanged"/>
         </StackPanel>
 
         <ListBox Name="lbxBookingsDetails" Grid.Column="0" Grid.Row="1" Margin="20,10,10,10"/>
@@ -35,7 +35,7 @@
             <Label Content="Available" FontSize="12" Margin="20,0,0,0"/>
             <TextBlock Name="tblAvailableBookings" Text="" FontSize="12" VerticalAlignment="Center"/>
 
-            <Button Content="Delete Booking" Name="btnDeleteBooking" Margin="35,0,0,0" Width="120"/>
+            <Button Content="Delete Booking" Name="btnDeleteBooking" Margin="35,0,0,0" Width="120" Click="btnDeleteBooking_Click"/>
         </StackPanel>
 
         <Label Content="New Booking" FontSize="20" Grid.Column="1" Grid.Row="0" Margin="10,10,0,0"/>
@@ -46,7 +46,7 @@
             <TextBox Name="tbxCustomerName" HorizontalAlignment="Left" Height="20" Width="170" Margin="0,20,0,0"/>
             <TextBox Name="tbxContactNumber" HorizontalAlignment="Left" Height="20" Width="170" Margin="0,20,0,0"/>
 
-            <Button Content="Customer Search" HorizontalAlignment="Center" Name="brnCustomerSearch" Margin="0,20,0,0" Width="120"/>
+            <Button Content="Customer Search" HorizontalAlignment="Center" Name="brnCustomerSearch" Margin="0,20,0,0" Width="120" Click="brnCustomerSearch_Click"/>
         </StackPanel>
     </Grid>
 </Window>

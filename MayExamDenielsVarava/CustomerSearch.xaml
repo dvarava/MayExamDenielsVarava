@@ -1,0 +1,45 @@
+﻿<Window x:Class="MayExamDenielsVarava.CustomerSearch"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MayExamDenielsVarava"
+        mc:Ignorable="d"
+        Title="CustomerSearch" Height="450" Width="700" MinWidth="700">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Matching Customers" FontSize="15" Grid.Column="0" Grid.Row="0" Margin="10,10,0,0"/>
+
+        <ListBox Name="lbxMatchingCustomers" Grid.Column="0" Grid.Row="1" Margin="20,10,10,10"/>
+
+        <Label Content="Create New Customer" FontSize="15" Grid.Column="1" Grid.Row="0" Margin="10,10,0,0"/>
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1" Margin="20,10,0,0">
+            <TextBox Name="tbxCustomerName" HorizontalAlignment="Left" Height="20" Width="170" Margin="0,20,0,0"/>
+            <TextBox Name="tbxPhoneNumber" HorizontalAlignment="Left" Height="20" Width="170" Margin="0,20,0,0"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <Label Content="Date of booking - " FontSize="12"/>
+                <TextBlock Name="tblDateOfBooking" Text="" FontSize="12" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <Label Content="Number of customers - " FontSize="12"/>
+                <TextBlock Name="tblNumberOfCustomers" Text="" FontSize="12" VerticalAlignment="Center"/>
+            </StackPanel>
+            
+
+            <Button Content="Create Booking" HorizontalAlignment="Center" Name="btnCreateBooking" Margin="0,20,0,0" Width="120"/>
+        </StackPanel>
+    </Grid>
+</Window>

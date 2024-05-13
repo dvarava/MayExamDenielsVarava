@@ -45,8 +45,28 @@ namespace MayExamDenielsVarava
                 var availableBookings = 40 - NumberOfBookings;
 
                 tblBookings.Text = NumberOfBookings.ToString();
+
+                // Display "No Available Bookings" if it's less than 0
                 tblAvailableBookings.Text = availableBookings > 0 ? availableBookings.ToString() : "No Available Bookings";
             }
+        }
+
+        private void btnDeleteBooking_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedBooking = lbxBookingsDetails.SelectedItem as Booking;
+
+            if (selectedBooking != null)
+            {
+                db.Bookings.Remove(selectedBooking);
+                db.SaveChanges();
+            }
+
+        }
+
+        private void brnCustomerSearch_Click(object sender, RoutedEventArgs e)
+        {
+            CustomerSearch customerSearchWindow = new CustomerSearch();
+            customerSearchWindow.Show();
         }
     }
 }
