@@ -13,7 +13,7 @@ namespace MayExamDenielsVarava
         public DateTime BookingsDate { get; set; }
         public int NumberOfParticipants { get; set; }
 
-        public virtual Customer Customer { get; set; }
-        public int CustomerId { get; set; }
+        public virtual Customer Customer { get; set; } // navigation property
+        public int CustomerId { get; set; } // foreign key
     }
 }

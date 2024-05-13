@@ -12,6 +12,6 @@ namespace MayExamDenielsVarava
         public string Name { get; set; }
         public string ContactNumber { get; set; }
 
-        public virtual List<Booking> Bookings { get; set; }
+        public virtual List<Booking> Bookings { get; set; } // navigation property
     }
 }
