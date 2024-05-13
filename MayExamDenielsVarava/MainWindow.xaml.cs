@@ -59,6 +59,7 @@ namespace MayExamDenielsVarava
             string customerName = tbxCustomerName.Text;
             string contactNumber = tbxContactNumber.Text;
 
+            // Retrieve customer id based on name and number
             var customerId = db.Customers
                 .Where(b => b.Name == customerName
                 && b.ContactNumber == contactNumber)
@@ -86,7 +87,7 @@ namespace MayExamDenielsVarava
 
             if (selectedBooking != null)
             {
-                // remove selected booking from database
+                // Remove selected booking from database
                 db.Bookings.Remove(selectedBooking);
                 db.SaveChanges();
             }
@@ -95,6 +96,7 @@ namespace MayExamDenielsVarava
 
         private void btnCustomerSearch_Click(object sender, RoutedEventArgs e)
         {
+            // Open Customer Search window
             CustomerSearch customerSearchWindow = new CustomerSearch();
             customerSearchWindow.Show();
         }
