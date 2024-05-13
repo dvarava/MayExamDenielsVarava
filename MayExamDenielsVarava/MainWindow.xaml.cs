@@ -40,16 +40,12 @@ namespace MayExamDenielsVarava
                     .ToList();
 
                 lbxBookingsDetails.ItemsSource = bookings;
-            }
-        }
 
-        private void UpdateBookingsInfo()
-        {
-            var selectedDate = dtpDetailsBookingDate.SelectedDate;
+                var NumberOfBookings = bookings.Count;
+                var availableBookings = 40 - NumberOfBookings;
 
-            if (selectedDate != null)
-            {
-
+                tblBookings.Text = NumberOfBookings.ToString();
+                tblAvailableBookings.Text = availableBookings > 0 ? availableBookings.ToString() : "No Available Bookings";
             }
         }
     }

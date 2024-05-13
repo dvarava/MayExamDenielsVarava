@@ -41,7 +41,7 @@
         <Label Content="New Booking" FontSize="20" Grid.Column="1" Grid.Row="0" Margin="10,10,0,0"/>
 
         <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1" Margin="20,10,0,0">
-            <DatePicker Name="dtpNewBookingDate" HorizontalAlignment="Left" Height="20" Width="120"/>
+            <DatePicker Name="dtpNewBookingDate" HorizontalAlignment="Left" Height="25" Width="120"/>
             <TextBox Name="tbxNumberOfCustomers" HorizontalAlignment="Left" Height="20" Width="170" Margin="0,20,0,0"/>
             <TextBox Name="tbxCustomerName" HorizontalAlignment="Left" Height="20" Width="170" Margin="0,20,0,0"/>
             <TextBox Name="tbxContactNumber" HorizontalAlignment="Left" Height="20" Width="170" Margin="0,20,0,0"/>
