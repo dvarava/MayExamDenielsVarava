@@ -15,5 +15,6 @@ namespace MayExamDenielsVarava
 
         public virtual Customer Customer { get; set; } // navigation property
         public int CustomerId { get; set; } // foreign key
+
     }
 }
