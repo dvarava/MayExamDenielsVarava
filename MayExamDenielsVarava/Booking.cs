@@ -16,5 +16,9 @@ namespace MayExamDenielsVarava
         public virtual Customer Customer { get; set; } // navigation property
         public int CustomerId { get; set; } // foreign key
 
+        public string ToString()
+        {
+            return $"{Customer.Name} ({Customer.ContactNumber}) - Party of {NumberOfParticipants}";
+        }
     }
 }
