@@ -20,20 +20,20 @@
 
         <StackPanel Orientation="Horizontal">
             <Label Content="Booking Details" FontSize="20" Grid.Column="0" Grid.Row="0" Margin="10,10,0,0"/>
-            <DatePicker Name="dtpDetailsBookingDate" Grid.Column="0" Grid.Row="0" Height="20"  Margin="10,0,0,0"/>
+            <DatePicker Name="dtpDetailsBookingDate" Grid.Column="0" Grid.Row="0" Height="20"  Margin="10,0,0,0" SelectedDateChanged="dtpDetailsBookingDate_SelectedDateChanged"/>
         </StackPanel>
 
-        <ListBox Name="lbxMovieListings" Grid.Column="0" Grid.Row="1" Margin="20,10,10,10"/>
+        <ListBox Name="lbxBookingsDetails" Grid.Column="0" Grid.Row="1" Margin="20,10,10,10"/>
 
         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2">
             <Label Content="Capacity" FontSize="12" Margin="20,0,0,0"/>
-            <TextBlock Name="tblCapacity" Text="100" FontSize="12" VerticalAlignment="Center"/>
+            <TextBlock Name="tblCapacity" Text="40" FontSize="12" VerticalAlignment="Center"/>
 
             <Label Content="Bookings" FontSize="12" Margin="20,0,0,0"/>
-            <TextBlock Name="tblBookings" Text="100" FontSize="12" VerticalAlignment="Center"/>
+            <TextBlock Name="tblBookings" Text="" FontSize="12" VerticalAlignment="Center"/>
 
             <Label Content="Available" FontSize="12" Margin="20,0,0,0"/>
-            <TextBlock Name="tblAvailableBookings" Text="100" FontSize="12" VerticalAlignment="Center"/>
+            <TextBlock Name="tblAvailableBookings" Text="" FontSize="12" VerticalAlignment="Center"/>
 
             <Button Content="Delete Booking" Name="btnDeleteBooking" Margin="35,0,0,0" Width="120"/>
         </StackPanel>

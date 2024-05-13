@@ -20,9 +20,37 @@ namespace MayExamDenielsVarava
     /// </summary>
     public partial class MainWindow : Window
     {
+        private RestaurantData db = new RestaurantData();
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void dtpDetailsBookingDate_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var selectedDate = dtpDetailsBookingDate.SelectedDate;
+
+            if (selectedDate != null)
+            {
+                var bookings = db.Bookings
+                    .Where(b => b.BookingsDate.Year == selectedDate.Value.Year
+                        && b.BookingsDate.Month == selectedDate.Value.Month
+                        && b.BookingsDate.Day == selectedDate.Value.Day)
+                    .ToList();
+
+                lbxBookingsDetails.ItemsSource = bookings;
+            }
+        }
+
+        private void UpdateBookingsInfo()
+        {
+            var selectedDate = dtpDetailsBookingDate.SelectedDate;
+
+            if (selectedDate != null)
+            {
+
+            }
         }
     }
 }
