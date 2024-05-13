@@ -26,7 +26,7 @@
 
         <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1" Margin="20,10,0,0">
             <TextBox Name="tbxCustomerName" HorizontalAlignment="Left" Height="20" Width="170" Margin="0,20,0,0"/>
-            <TextBox Name="tbxPhoneNumber" HorizontalAlignment="Left" Height="20" Width="170" Margin="0,20,0,0"/>
+            <TextBox Name="tbxContactNumber" HorizontalAlignment="Left" Height="20" Width="170" Margin="0,20,0,0"/>
 
             <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
                 <Label Content="Date of booking - " FontSize="12"/>

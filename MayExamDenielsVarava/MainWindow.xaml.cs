@@ -25,6 +25,7 @@ namespace MayExamDenielsVarava
         public MainWindow()
         {
             InitializeComponent();
+            CreateBooking();
         }
 
         private void dtpDetailsBookingDate_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
@@ -51,22 +52,52 @@ namespace MayExamDenielsVarava
             }
         }
 
+        private void CreateBooking()
+        {
+            var selectedDate = dtpNewBookingDate.SelectedDate;
+            var numberOfCustomers = tbxNumberOfCustomers.Text;
+            string customerName = tbxCustomerName.Text;
+            string contactNumber = tbxContactNumber.Text;
+
+            var customerId = db.Customers
+                .Where(b => b.Name == customerName
+                && b.ContactNumber == contactNumber)
+                .Select(b => b.CustomerId).FirstOrDefault();
+
+            if (selectedDate != null && numberOfCustomers != null && customerName != null && contactNumber != null)
+            {
+                var booking = new Booking
+                {
+                    BookingsDate = selectedDate.Value,
+                    NumberOfParticipants = int.Parse(numberOfCustomers),
+                    CustomerId = customerId
+                };
+
+                db.Bookings.Add(booking);
+                db.SaveChanges();
+            }
+        }
+
+
+        #region buttonClickEvents
         private void btnDeleteBooking_Click(object sender, RoutedEventArgs e)
         {
             var selectedBooking = lbxBookingsDetails.SelectedItem as Booking;
 
             if (selectedBooking != null)
             {
+                // remove selected booking from database
                 db.Bookings.Remove(selectedBooking);
                 db.SaveChanges();
             }
 
         }
 
-        private void brnCustomerSearch_Click(object sender, RoutedEventArgs e)
+        private void btnCustomerSearch_Click(object sender, RoutedEventArgs e)
         {
             CustomerSearch customerSearchWindow = new CustomerSearch();
             customerSearchWindow.Show();
         }
+        #endregion
     }
 }

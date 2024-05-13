@@ -46,7 +46,7 @@
             <TextBox Name="tbxCustomerName" HorizontalAlignment="Left" Height="20" Width="170" Margin="0,20,0,0"/>
             <TextBox Name="tbxContactNumber" HorizontalAlignment="Left" Height="20" Width="170" Margin="0,20,0,0"/>
 
-            <Button Content="Customer Search" HorizontalAlignment="Center" Name="brnCustomerSearch" Margin="0,20,0,0" Width="120" Click="brnCustomerSearch_Click"/>
+            <Button Content="Customer Search" HorizontalAlignment="Center" Name="btnCustomerSearch" Margin="0,20,0,0" Width="120" Click="btnCustomerSearch_Click"/>
         </StackPanel>
     </Grid>
 </Window>
